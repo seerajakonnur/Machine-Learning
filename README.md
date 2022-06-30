@@ -9,3 +9,6 @@ PCA based pipeline (PCA-pipeline.ipynb):
     • Sklearn’s RandomizedsearchCV is performed on training data to get the best parameters and best estimator using Random forest.
     • The best random forest model is saved and used to predict samples from test data.
     
+ ANOVA F - value based approch:   
+ Code 
+    
