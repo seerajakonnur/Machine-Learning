@@ -1,0 +1,65 @@
+,Feature_Name,Score
+63,bp medication_1.0,0.116
+62,bp medication_0.0,0.103
+45,Age when attended assessment centre,0.075
+56,Sex_Female,0.058
+57,Sex_Male,0.049
+46,mean sbp,0.029
+40,slope_b_d,0.028
+51,Diabetes diagnosed by doctor_Yes,0.023
+49,Diabetes diagnosed by doctor_No,0.023
+39,slope_b_c,0.022
+48,cholesterol HDL ratio,0.021
+27,b_div_a,0.02
+47,BMI,0.018
+52,Smoking status_Current,0.016
+20,RI_p2,0.016
+3,prop_s,0.015
+28,c_div_a,0.015
+33,c_div_amp,0.015
+38,AGI_mod,0.013
+41,IPAD,0.013
+10,t_b_c,0.012
+37,AGI_inf,0.012
+53,Smoking status_Never,0.012
+4,t_sys,0.011
+36,AGI,0.011
+6,t_ratio,0.011
+24,IPA,0.01
+34,d_div_amp,0.01
+21,ratio_p2_p1,0.009
+22,A1,0.009
+30,e_div_a,0.009
+35,e_div_amp,0.008
+32,b_div_amp,0.008
+16,AI,0.008
+29,d_div_a,0.008
+5,t_dia,0.008
+8,t_p1in_dia,0.008
+9,t_p2in_dia,0.008
+11,t_b_d,0.008
+15,AP,0.008
+1,delta_t,0.007
+2,CT,0.007
+31,a_div_amp,0.007
+14,pulse_amp_p2,0.007
+0,T,0.007
+44,SI,0.007
+17,dia_amp,0.007
+18,RI,0.007
+43,CT_div_ht,0.007
+23,A2,0.006
+26,ms_div_amp,0.006
+61,Ethnic background_white/not recorded,0.006
+7,prop_delta_t,0.006
+13,pulse_amp_p1,0.006
+19,RI_p1,0.006
+12,pulse_amp,0.006
+42,k,0.006
+25,ms,0.005
+58,Ethnic background_Asian,0.005
+59,Ethnic background_Black,0.004
+55,Smoking status_Previous,0.003
+50,Diabetes diagnosed by doctor_Prefer not to answer,0.0
+60,Ethnic background_other including mixed,0.0
+54,Smoking status_Prefer not to answer,0.0
