@@ -33,4 +33,3 @@ This code carries out classification of speech data samples into 'Cold' i.e. pre
 MSc Dissertation (King's College London): Development of a risk prediction model for cardiovascular disease based on classical risk factors and pulse wave features using machine learning. The data was obtained from the UK Biobank.
 The code named undersampling_for_cvd carries out random undersampling of the data.
 The codes starting with cv_nested contains the ML model for cardiovascular disease (each code containing different combinations of features). The codes starting with cvd_death_nested do the same for the outcome 'cardiovascular disease death'. The codes starting with feature_imp carry out identification and analysis of the important features in a model, thus trying to make the model interpretable.
-The codes 
