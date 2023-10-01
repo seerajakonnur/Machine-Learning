@@ -7,8 +7,11 @@ These codes were developed to carry out a classification task (classifying tissu
 
 Code Fanova_pipeline_methyl_fanova_ranking.ipynb :
 • The data consisting of cancerous and non cancerous samples is first split into training and test data in the ratio 80% training and 20% testing data using python sklearn’s test train split feature.
+
 • Removing features having zero variance from training data using sklearn variance threshold.
+
 • Applying f_classif from sklearn.feature_selection to the training data to rank the features.
+
 • This calculates the anova F value and ranks the features accordingly. Save the rankings for further analysis.
 
 Code Fanova_pipeline_methyl_fanova_model.ipynb :
