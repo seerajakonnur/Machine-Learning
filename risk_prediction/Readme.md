@@ -1,3 +1,8 @@
-# Risk prediction model for cardiovascular disease (outcome is cardiovascular disease) and cardiovascular diasease death (the outcome here is death)
 
-The two folders contain codes for the two different outcomes described above.
+# Cardiovascular disease and cardiovascular disease death risk prediction based on classical risk factors and pulse wave features using XGBoost machine learning model.
+
+Cardiovascular diseases are the leading cause of mortality worldwide. However, effective prevention therapies can help reduce the number of deaths that are caused by cardiovascular diseases. For the prevention therapies to work, cardiovascular disease risk prediction is important.  Classical risk factors are used to predict cardiovascular disease, but in recent years there has been an interest in using the pulse wave features for the prediction of cardiovascular disease.
+
+The study was carried out for two outcomes viz. Cardiovascular disease and cardiovascular disease death. The data used in this study was obtained from the UK Biobank. Total number of participants for which complete data was available was 127,524. The number of participants positive for cardiovascular disease were 10,301 and the number of participants positive for cardiovascular disease death were 468. Hence it was an imbalanced data. 
+
+This study was carried out to check if the pulse wave features can predict  cardiovascular disease risk and cardiovascular disease death risk independently (without classical risk factors). The results of the analysis showed that the pulse wave features were able to predict both the outcomes but their prediction power is less than classical risk factors as the AUC value for cardiovascular disease prediction with pulse wave features was 0.63 and with classical risk factors was 0.73. A similar result was observed for cardiovascular disease death with the AUC values being 0.65 with only pulse wave features and 0.76 with classical risk factors. 
