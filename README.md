@@ -6,7 +6,7 @@ There are 4 sub-folders as follows:
 
 •	DL_on_speech_data (Classification of people into people having cold and people not having cold based on their speech data using SVM and deep learning)
 
-•	ML_on_sepsis_data(Sepis diagnosis using supervised machine learning techniques based on vital signs, laboratory tests and demographic variables)
+•	ML_for_sepsis_diagnosis (Sepis diagnosis using supervised machine learning techniques based on vital signs, laboratory tests and demographic variables)
 
 •	risk_prediction (Development of risk prediction model for cardiovascular disease and cardiovascular disease death)
 
