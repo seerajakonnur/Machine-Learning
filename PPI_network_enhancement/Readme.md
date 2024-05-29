@@ -1,0 +1,91 @@
+
+# Enhancement of host pathogen protein - protein inetraction inetwork using recommender systems and machine learning
+
+## Data Acquisition:
+
+• Downloaded the bipartite protein-protein interaction network from the NCBI database in .csv format.
+
+•	The CSV file includes:
+
+   1. Host and pathogen protein names
+   2. Accession numbers
+   3. Gene IDs
+   4. Interaction types (e.g., binds, downregulates, affects, decreases, inhibits), dataset contains 147 distinct types of interactions
+   5. Interaction description in detail
+
+
+
+##  Initial Focus:
+•	For the initial phase of the project, I focused solely on binding interactions. The reason being binding interactions are the actual physical inetactions between two proteins hence more reliable than any other types of interactions and thus serve a good starting point.
+
+•	The objective was to use these binding interactions as a starting point to enhance the network.
+
+•Then the interactions which we get after enehnacement can be cross checked and see if we they match with any other types of interactions that were there in the original data. This way we can validate the enhanced interactions.
+
+
+##  Network Enhancement:
+•	We applied a novel technique to expand the interaction network.
+
+•	The goal was to identify additional types of interactions present in the original dataset but not initially considered.
+
+## Algorithm Application:
+•	We applied a probabilistic spreading algorithm (PSA) commonly used in recommendation systems to the binding interactions.
+
+•	The script PSA.py was utilized for this purpose.
+
+## Input Requirements:
+•	A file with two columns: the first column contains pathogen proteins and the second contains host proteins.
+
+•	The name of the output file to store the results
+
+##	Output:
+•	The PSA.py script outputs a .txt file.
+
+•	The output file contains:
+1.	The pathogen protein in the first column.
+2.	The corresponding interacting host protein along with the likelihood of interaction in the second column.
+3. We utilized machine learning to filter the predicted interactions.
+
+
+# Feature Selection:
+•	Amino acid properties were used as features for the machine learning model.
+
+•	Hypothesis: A set of host proteins interacting with one pathogen protein must share common features by virtue of which they are all interacting with the same pathogen protein.
+
+•	Predicted proteins must also exhibit these similar features.
+
+•	These features were exploited using machine learning techniques.
+
+• These features were used in the machine learning model: charge, hydrophobic ratio, aromaticity, aliphatic index, instability Index, isoelectric point, boman index, kidera properties (10).
+
+## Data Preparation
+•	Protein sequences for the relevant proteins were downloaded from UniProt.
+
+•	The next processes was performed separately for each pathogen protein. Theese processes were completed for 5 pathogen proteins,  namely gag, matrix, nef, rev, vpr.
+
+•	Grouping Host Proteins: For each pathogen protein (e.g. gag), three separate groups of human proteins were prepared:
+1.	Proteins interacting with the pathogen protein.
+2.	Proteins not interacting with the pathogen protein.
+3.	Predicted interacting proteins generated from the PSA algorithm.
+
+## Motif Conversion
+•	The protein sequences were converted to motifs using the MEME tool. Command used for motif conversion:
+
+
+   
+
+
+```bash
+meme -mod anr protein_sequences.fasta -protein -o meme_output -nmotifs 5 
+```
+
+
+## Amino Acid Property Calculation
+•	Calculate the amino acid properties for all the motifs involved using specific codes (provide these codes or link to them if available).
+
+## Supervised Machine Learning
+• Algorithm Used: A supervised machine learning algorithm, specifically a Random Forest classifier, was used to classify the predicted proteins (from PSA) as interacting or non-interacting with a particular pathogen protein.
+
+•Training Data: The labelled data from earlier preparations were used, where proteins were separated into interacting and non-interacting groups.
+
+
