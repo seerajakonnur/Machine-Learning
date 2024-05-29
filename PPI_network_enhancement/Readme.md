@@ -34,9 +34,12 @@
 •	The script PSA.py was utilized for this purpose.
 
 ## Input Requirements:
-•	A file with two columns: the first column contains pathogen proteins and the second contains host proteins.
+•	A tab separated file with two columns: the first column contains pathogen proteins and the second contains host proteins.
 
-•	The name of the output file to store the results
+•	The name of the output file to store the results. 
+
+•	The code works without errors in Python2 however, gives an error in Python3 "'dict_keys’ object is not subscriptable” as  in Python 3 dict.keys() returns an iterable but not indexable object. 
+
 
 ##	Output:
 •	The PSA.py script outputs a .txt file.
@@ -44,7 +47,10 @@
 •	The output file contains:
 1.	The pathogen protein in the first column.
 2.	The corresponding interacting host protein along with the likelihood of interaction in the second column.
-3. We utilized machine learning to filter the predicted interactions.
+3.	The PSA gives a plethora of recommended interactions, as there are no biological properties considerd here, there is high chance that many of these interactions are false.
+4.	Therefore it is crucial to filter these interactions. A cutoff needs to be decided.
+5.	Histogram was plotted for all values to check where the density of values lie and only the interactions above 75 percentile were chisen for further analysis.
+6. We utilized machine learning to fuether filter the above predicted interactions.
 
 
 # Feature Selection:
@@ -58,7 +64,7 @@
 
 • These features were used in the machine learning model: charge, hydrophobic ratio, aromaticity, aliphatic index, instability Index, isoelectric point, boman index, kidera properties (10).
 
-## Data Preparation
+## Data Preparation:
 •	Protein sequences for the relevant proteins were downloaded from UniProt.
 
 •	The next processes was performed separately for each pathogen protein. Theese processes were completed for 5 pathogen proteins,  namely gag, matrix, nef, rev, vpr.
@@ -68,24 +74,26 @@
 2.	Proteins not interacting with the pathogen protein.
 3.	Predicted interacting proteins generated from the PSA algorithm.
 
-## Motif Conversion
+## Motif Conversion:
 •	The protein sequences were converted to motifs using the MEME tool. Command used for motif conversion:
-
-
-   
-
 
 ```bash
 meme -mod anr protein_sequences.fasta -protein -o meme_output -nmotifs 5 
 ```
 
 
-## Amino Acid Property Calculation
+## Amino Acid Property Calculation:
 •	Calculate the amino acid properties for all the motifs involved using specific codes (provide these codes or link to them if available).
 
-## Supervised Machine Learning
+## Supervised Machine Learning:
 • Algorithm Used: A supervised machine learning algorithm, specifically a Random Forest classifier, was used to classify the predicted proteins (from PSA) as interacting or non-interacting with a particular pathogen protein.
 
-•Training Data: The labelled data from earlier preparations were used, where proteins were separated into interacting and non-interacting groups.
+• Training Data: The labelled data from earlier preparations were used, where proteins were separated into interacting and non-interacting groups.
+
+• Enhancement: A total of 35 new interactions were identified for 5 pathogen proteins using this technique.
+
+## Network Visualisation:
+• Cytoscape, an open source bioinfomartics software was used to visualize the interactions.
+
 
 
