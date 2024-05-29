@@ -8,5 +8,7 @@ There are 5 sub-folders as follows:
 
 •	ML_for_sepsis_diagnosis (Sepsis diagnosis using supervised machine learning techniques based on vital signs, laboratory tests and demographic variables)
 
+•	PPI_network_enhancement (Enhanced a host pathogen protein - protein interaction network using recommneder systems and machine learning)
+
 •	risk_prediction (Development of risk prediction model for cardiovascular disease and cardiovascular disease death)
 
