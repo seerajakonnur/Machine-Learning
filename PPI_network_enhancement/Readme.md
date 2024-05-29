@@ -53,7 +53,7 @@
 6. We utilized machine learning to fuether filter the above predicted interactions.
 
 
-# Feature Selection:
+## Feature Selection:
 •	Amino acid properties were used as features for the machine learning model.
 
 •	Hypothesis: A set of host proteins interacting with one pathogen protein must share common features by virtue of which they are all interacting with the same pathogen protein.
