@@ -1,6 +1,6 @@
 # Statistical-analysis-and-Machine-Learning
 
-There are 4 sub-folders as follows:
+There are 5 sub-folders as follows:
 
 •	Classification_of_cancer_data_using_ML (classification of tissue samples into cancerous and non-cancerous tissue samples using machine learning based on Multi-omics data)
 
