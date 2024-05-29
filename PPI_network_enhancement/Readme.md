@@ -47,10 +47,10 @@
 •	The output file contains:
 1.	The pathogen protein in the first column.
 2.	The corresponding interacting host protein along with the likelihood of interaction in the second column.
-3.	The PSA gives a plethora of recommended interactions, as there are no biological properties considerd here, there is high chance that many of these interactions are false.
-4.	Therefore it is crucial to filter these interactions. A cutoff needs to be decided.
-5.	Histogram was plotted for all values to check where the density of values lie and only the interactions above 75 percentile were chisen for further analysis.
-6. We utilized machine learning to fuether filter the above predicted interactions.
+3.	The PSA algorithm generates a wide range of recommended interactions. However, since it doesn't consider biological properties, many of these interactions are likely to be false positives.
+4.	To address this, it is crucial to filter the interactions and establish a cutoff for further analysis.
+5.	To determine the appropriate cutoff, we plotted a histogram of the interaction likelihood values to examine their distribution. Based on the density of values, we selected only those interactions above the 75th percentile for further analysis. This approach helps ensure that the most likely interactions are prioritized while reducing the inclusion of potential false positives.
+6.	We utilized machine learning to fuether filter the above predicted interactions.
 
 
 ## Feature Selection:
