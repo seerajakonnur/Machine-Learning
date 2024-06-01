@@ -94,7 +94,9 @@ meme -mod anr protein_sequences.fasta -protein -o meme_output -nmotifs 5
 
 ## Network Visualisation:
 • Cytoscape, an open source bioinfomartics software was used to visualize the interactions.
+
 • The binding_interactions_starting_point.pdf file shows the interaction network containing only binding interactions, which serves as the starting point for this project.
+
 • The enhanced2.pdf shows enhanced network where the new interactions are colored differently in shades of pink. The color intensity ranges from light to dark, indicating the reliability of the newly predicted interactions. Darker colors represent higher confidence levels. This only shows new interactions 5 pathogen proteins and not all.
 
 
