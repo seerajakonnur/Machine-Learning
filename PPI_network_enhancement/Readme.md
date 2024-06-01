@@ -83,7 +83,7 @@ meme -mod anr protein_sequences.fasta -protein -o meme_output -nmotifs 5
 
 
 ## Amino Acid Property Calculation:
-•	Calculate the amino acid properties for all the motifs involved using specific codes (provide these codes or link to them if available).
+•	Calculate the amino acid properties for all the motifs. The code attributes.py calculates charge, hydrophobic ratio, aromaticity, aliphatic index properties using the modlamp Python package. Instability Index, isoelectric point, boman index, kidera properties (10) are calculated using R codes boman_ii_ip.r and kidera.r
 
 ## Supervised Machine Learning:
 • Algorithm Used: A supervised machine learning algorithm, specifically a Random Forest classifier, was used to classify the predicted proteins (from PSA) as interacting or non-interacting with a particular pathogen protein.
@@ -94,6 +94,8 @@ meme -mod anr protein_sequences.fasta -protein -o meme_output -nmotifs 5
 
 ## Network Visualisation:
 • Cytoscape, an open source bioinfomartics software was used to visualize the interactions.
+• The binding_interactions_starting_point.pdf file shows the interaction network containing only binding interactions, which serves as the starting point for this project.
+• The enhanced2.pdf shows enhanced network where the new interactions are colored differently in shades of pink. The color intensity ranges from light to dark, indicating the reliability of the newly predicted interactions. Darker colors represent higher confidence levels. This only shows new interactions 5 pathogen proteins and not all.
 
 
 
