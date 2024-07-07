@@ -1,7 +1,7 @@
 # Classification of tissue samples into cancerous and non-cancerous samples based on Multi-omics data using machine learning
 
 
-These codes were developed to carry out a classification task (classifying tissues into cancerous and non-cancerous samples). The data used was multi-omics data. It includes mRNA, miRNA (micro RNA) and methylation data. During the project, analysis was carried out using all three types of omics data separately as well as using a multi-omics approach. The methodology followed was same for all. This folder all scripts developed for methylation data. As the dimensionality of multi-omics data is high, two dimensionality reduction techniques were used viz. ANOVA F-value and PCA. 
+These codes were developed to carry out a classification task (classifying tissues into cancerous and non-cancerous samples). The data used was multi-omics data. It includes mRNA, miRNA (micro RNA) and methylation data. During the project, analysis was carried out using all three types of omics data separately as well as using a multi-omics approach. The methodology followed was same for all. This folder all scripts developed for methylation data. As the dimensionality of multi-omics data is high, three dimensionality reduction techniques were used viz. ANOVA F-value, stacked autoencoders and PCA. 
 
 # ANOVA F-value approach:
 
@@ -20,6 +20,18 @@ Code Fanova_pipeline_methyl_fanova_model.ipynb :
 Code Fnaova_pipeline_methyl_fanova_prediction.ipynb :
 • The best model from both (top 100 features and top 50 features ) is used to predict the classification of test data samples.
 
+# Stacked autoencoder pipeline (code: Stacked_autoencoder(std scaler)_pipeline.ipynb , Stacked_autoencoder(without_scaling)_pipeline.ipynb)
+• The data consisting of cancerous and non cancerous samples is first split into training and test data in the ratio 80% training and 20% testing data using python sklearn’s test train split feature.
+
+• The input dimensions are 36514 and the encodind dimensions are 15 (based on the assumption that the number of samples must be atleast 10 times the number of features).
+
+• The stacked autoencoder was coded using Functional API. The encoded data (15 features) was used for classofication using random forest.
+
+• Two approaches were tried for the autoencoder, with stanadard scaler and without standard scaler. The one with standard scaler  gave better performance.
+
+• Sklearn’s RandomizedsearchCV is performed on training data to get the best parameters and best estimator using Random forest classifier.
+
+• The best random forest model is saved and used to predict the classification of test data samples.
 
 # PCA pipeline (code: PCA-pipeline.ipynb)
 
